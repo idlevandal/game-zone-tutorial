@@ -2,7 +2,8 @@ import React, {useState} from 'react';
 import * as Font from 'expo-font';
 import Home from './screens/home';
 import {AppLoading} from 'expo';
-import Navigator from './routes/homeStack';
+import HomeNavigator from './routes/homeStack';
+import RootDrawerNavigator from './routes/drawer';
 
 const getFonts = () => Font.loadAsync({
   'nunito-bold': require('./assets/fonts/Nunito-Bold.ttf'),
@@ -14,7 +15,7 @@ export default function App() {
 
   if (fontsLoaded) {
     return (
-        <Navigator />
+        <RootDrawerNavigator />
     );
   } else {
     return (
