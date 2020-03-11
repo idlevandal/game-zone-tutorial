@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, Text, View, Dimensions} from 'react-native';
+import {StyleSheet, Text, View, Dimensions, Image, ImageBackground, Modal} from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 
@@ -13,10 +13,13 @@ export default function Header() {
     };
 
     return (
-        <View style={styles.header}>
+        <ImageBackground source={require('../assets/game_bg.png')} style={styles.header}>
             <MaterialIcons name="menu" size={28} color='#444' onPress={openMenu} style={styles.icon}  />
-            <Text style={styles.headerText}>Game Zooone</Text>
-        </View>
+            <View style={styles.headerTitle}>
+                <Image source={require('../assets/heart_logo.png')} style={styles.headerImage} />
+                <Text style={styles.headerText}>Game Zooone</Text>
+            </View>
+        </ImageBackground>
     )
 }
 
@@ -35,8 +38,16 @@ const styles = StyleSheet.create({
         color: '#333',
         letterSpacing: 1,
     },
+    headerTitle: {
+        flexDirection: 'row'
+    },
     icon: {
         position: 'absolute',
         left: 16
+    },
+    headerImage: {
+        width: 26,
+        height: 26,
+        marginHorizontal: 10,
     }
 });

@@ -8,7 +8,7 @@ const Stack = createStackNavigator();
 
 export default function HomeStack() {
     return (
-        <Stack.Navigator screenOptions={{headerStyle: {backgroundColor: '#f4511e', height: 80}, headerTintColor: '#fff'}}>
+        <Stack.Navigator screenOptions={{headerStyle: {backgroundColor: '#eee', height: 80}, headerTintColor: '#333'}}>
             {/*<Stack.Screen name='Home' component={Home} options={{ title: 'GameZone' }} />*/}
             <Stack.Screen name='Home' component={Home} options={{ headerTitle: () => <Header /> , headerTitleAlign: 'center'}} />
             <Stack.Screen

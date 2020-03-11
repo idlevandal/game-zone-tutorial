@@ -7,9 +7,9 @@ const Stack = createStackNavigator();
 
 export default function AboutStack() {
     return (
-        <Stack.Navigator screenOptions={{headerStyle: {backgroundColor: '#f4511e', height: 80}, headerTintColor: '#fff'}}>
+        <Stack.Navigator screenOptions={{headerStyle: {backgroundColor: '#eee', height: 80}, headerTintColor: '#333'}}>
             {/*<Stack.Screen name='About' component={About} options={{ title: 'About' }} />*/}
-            <Stack.Screen name='About' component={About} options={{ headerTitle: () => <Header /> }} />
+            <Stack.Screen name='About' component={About} options={{ headerTitle: () => <Header />, headerTitleAlign: 'center'}} />
         </Stack.Navigator>
     )
 }
